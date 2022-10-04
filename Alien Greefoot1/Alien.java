@@ -19,6 +19,7 @@ public class Alien extends World
         super(600, 400, 1); 
         prepare();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -27,11 +28,8 @@ public class Alien extends World
     {
         Hero hero = new Hero();
         addObject(hero,89,232);
-        
-        Hero hero1 = new Hero();
-        addObject(hero1, 89,132);
-        
-        Hero hero2 = new Hero();
-        addObject(hero2, 89,313);
+
+        Enemy enemy = new Enemy();
+        addObject(enemy,458,111);
     }
 }
