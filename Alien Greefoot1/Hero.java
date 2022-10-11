@@ -16,29 +16,11 @@ public class Hero extends Actor
     {
         // Add your action code here.
         moveHero();
+        shootLaser();
     }
     
     public void moveHero()
     {
-        // Add your action code here.
-        /*move(2);
-        
-        if (isAtEdge())
-            setLocation(0,getY());
-            
-        if(Greenfoot.isKeyDown("right"))
-        {
-            turn(3);
-        }
-        if(Greenfoot.isKeyDown("left"))
-        {
-            turn(-3);
-        }
-        if(Greenfoot.isKeyDown("up"))
-        {
-            turn(-3);
-        }*/
-        
         if(Greenfoot.isKeyDown("d"))
         {
             setLocation(getX()+3,getY());
@@ -56,5 +38,20 @@ public class Hero extends Actor
         {
             setLocation(getX(),getY()+3);
         }
+    }
+        
+        int laserTimer = 0;
+        public void shootLaser(){
+            if (laserTimer == 30){
+                getWorld().addObject(
+                    new Laser(),
+                    getX() + 5,
+                    getY()
+                );
+            
+                laserTimer = 0;
+            }else{
+                laserTimer++;
+            }
     }
 }
