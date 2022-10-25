@@ -17,6 +17,7 @@ public class Hero extends Actor
         // Add your action code here.
         moveHero();
         shootLaser();
+        detectEnemyCollision();
     }
     
     public void moveHero()
@@ -53,5 +54,23 @@ public class Hero extends Actor
             }else{
                 laserTimer++;
             }
+        }
+        public void detectEnemyCollision()
+        {
+            if (isTouching(Enemy.class))
+            {
+                enemyCollision();
+                setLocation(100,200);
+            }
+        }
+        public void enemyCollision() 
+        {
+            if (isTouching(Enemy.class)) {
+            getWorld().addObject(
+                new Boom(),
+                getX(),
+                getY()
+                );
+        }
     }
 }
