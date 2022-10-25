@@ -8,26 +8,33 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
-    public void act()
-    {
-        //setRotation(180);
-        move(speed);
-        //removeEnemy();
-        
-        if (isAtEdge()){
-            getWorld().removeObject(this);
-        }
-    }
-    public int speed = 2; //variable global
-    public Enemy()
+     public Enemy()
     {
         setRotation(180);
     }
+    
     public Enemy(int speed)//variable lokal
     { 
         setRotation(180);
         this.speed = speed;
     }
+    
+    private int speed = 3; //variable global
+    public void act(){
+        enemyMove();
+    }
+    protected void enemyMove()
+    {
+        move(speed);
+
+        if (isAtEdge()){
+            getWorld().removeObject(this);
+        }
+    }
+    
+    
+   
+    
     /*public void removeEnemy()
     {
         if(isAtEdge())
@@ -37,6 +44,38 @@ public class Enemy extends Actor
     }*/
     
     
+    
+    //VERSI LAIN
+    /*
+    public Enemy() {
+        setRotation(180);
+    }
+     
+    public Enemy(int speed){
+        setRotation(180);
+        this.speed = speed;
+    }
+    
+    public int speed = 3;
+    public void act()
+    {
+        move(speed);
 
+        if (isAtEdge()){
+            getWorld().removeObject(this);
+        }
+    }
+    
+    atau
+    
+    public void enemyMove(){
+      move(speed);
+
+        if (isAtEdge()){
+            getWorld().removeObject(this);
+        }
+    }
+    */  
+    
 
 }

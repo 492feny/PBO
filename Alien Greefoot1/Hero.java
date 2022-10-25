@@ -20,7 +20,7 @@ public class Hero extends Actor
         detectEnemyCollision();
     }
     
-    public void moveHero()
+    private void moveHero()
     {
         if(Greenfoot.isKeyDown("d"))
         {
@@ -41,8 +41,8 @@ public class Hero extends Actor
         }
     }
         
-        int laserTimer = 0;
-        public void shootLaser(){
+        private int laserTimer = 0;
+        private void shootLaser(){
             if (laserTimer == 30){
                 getWorld().addObject(
                     new Laser(),
@@ -71,6 +71,8 @@ public class Hero extends Actor
                 getX(),
                 getY()
                 );
+            }
         }
-    }
+        
+        
 }

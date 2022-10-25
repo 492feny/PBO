@@ -22,7 +22,7 @@ public class Laser extends Actor
             
     }  
     
-    public void laserCollision(){
+    private void laserCollision(){
           if (isTouching(Enemy.class)){
               
               getWorld().addObject(
