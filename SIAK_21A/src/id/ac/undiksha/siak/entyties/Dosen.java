@@ -10,6 +10,43 @@ public class Dosen {
 	private String fakultas;
 	private String jabatan;
 	
+	public Dosen() {
+		this.setNama("(nama belum diisi)");
+		this.setAlamat("(alamat belum diisi)");
+		this.setNip("(nip belum diisi)");				
+		this.setProdi("(prodi belum diisi)");		
+		this.setJurusan("(jurusan belum diisi)");		
+		this.setFakultas("(fakultas belum diisi)");		
+	}
+	
+	public Dosen(String nama, String alamat, boolean jenisKelamin, String nip, String prodi, String jurusan,
+			String fakultas, String jabatan) {
+		super();
+		this.nama = nama;
+		this.alamat = alamat;
+		this.jenisKelamin = jenisKelamin;
+		this.nip = nip;
+		this.prodi = prodi;
+		this.jurusan = jurusan;
+		this.fakultas = fakultas;
+		this.jabatan = jabatan;
+	}
+	
+	public void printAllinfo() {
+		System.out.println("Nama: " 	+ this.getNama());
+		System.out.println("Alamat: " 	+ this.getAlamat());
+		System.out.println("NIP: " 		+ this.getNip());
+		System.out.println("Prodi: "	+ this.getProdi());
+		System.out.println("Jurusan: " 	+ this.getJurusan());
+		System.out.println("Fakultas: " + this.getFakultas());
+		System.out.println("Jabatan: " 	+ this.getJabatan());
+		
+		
+		System.out.println("Jenis Kelamin:"
+				+ (jenisKelamin ? "Laki-laki" : "Perempuan"));
+	}
+	
+	
 	public String getNama() {
 		return nama;
 	}

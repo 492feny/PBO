@@ -7,6 +7,37 @@ public class Pegawai {
 	private String nip;
 	private String unit;
 	
+	public Pegawai() {
+		this.setNama("(nama belum diisi)");
+		this.setAlamat("(alamat belum diisi)");
+		this.setNip("(nip belum diisi)");				
+		this.setUnit("(unit belum diisi)");			
+	}
+	
+	
+	
+	public Pegawai(String nama, String alamat, boolean jenisKelamin, String nip, String unit) {
+		super();
+		this.nama = nama;
+		this.alamat = alamat;
+		this.jenisKelamin = jenisKelamin;
+		this.nip = nip;
+		this.unit = unit;
+	}
+	
+	public void printAllinfo() {
+		System.out.println("Nama: " 	+ this.getNama());
+		System.out.println("Alamat: " 	+ this.getAlamat());
+		System.out.println("NIP: " 		+ this.getNip());
+		System.out.println("Unit: "	+ this.getUnit());
+		
+		
+		System.out.println("Jenis Kelamin:"
+				+ (jenisKelamin ? "Laki-laki" : "Perempuan"));
+	}
+
+
+
 	public String getNama() {
 		return nama;
 	}
