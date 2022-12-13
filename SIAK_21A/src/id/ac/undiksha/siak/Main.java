@@ -7,21 +7,19 @@ import id.ac.undiksha.siak.entyties.Pegawai;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+//		Mahasiswa mhs1 = new Mahasiswa();
+//		mhs1.setNama("Adi");
+//		mhs1.printAllinfo();
+//		
+//		System.out.println();
 		
 		System.out.println("==MAHASISWA==");
 		System.out.println();
 		
-		Mahasiswa mhs1 = new Mahasiswa();
-		mhs1.setNama("Adi");
-		mhs1.printAllinfo();
-		
-		System.out.println();
-		
 		Mahasiswa mhs2 = new Mahasiswa(
-				"Budi",
+				"Feny",
 				"Singaraja",
-				true,
+				false,
 				"12344534",
 				"Ilkom",
 				"TI",
@@ -36,26 +34,60 @@ public class Main {
 				"Yudhi",
 				"Singaraja",
 				true,
-				"1234453232",
+				"12344534",
 				"Ilkom",
 				"TI",
 				"FTK",
-				"Kaprodi");
+				"Dosen");
 		dsn1.printAllinfo();
-		
-		System.out.println();
-		
-		Dosen dsn2 = new Dosen();
-		mhs1.setNama("Dewi");
-		mhs1.printAllinfo();
 		
 		System.out.println();
 		System.out.println("==PEGAWAI==");
 		System.out.println();
 		
-		Pegawai pgw1 = new Pegawai();
-		pgw1.setNama("Feny");
+		Pegawai pgw1 = new Pegawai(
+				"Dewi",
+				"Singaraja",
+				false,
+				"12344534",
+				"Admin");
 		pgw1.printAllinfo();
+		
+		
+//		System.out.println();
+//		System.out.println("==DOSEN==");
+//		System.out.println();
+		
+//		Dosen dsn1 = new Dosen(
+//				"Yudhi",
+//				"Singaraja",
+//				true,
+//				"1234453232",
+//				"Ilkom",
+//				"TI",
+//				"FTK",
+//				"Kaprodi");
+//		dsn1.printAllinfo();
+//		
+//		System.out.println();
+//		
+//		Dosen dsn2 = new Dosen();
+//		mhs1.setNama("Dewi");
+//		mhs1.printAllinfo();
+//		
+//		System.out.println();
+//		System.out.println("==PEGAWAI==");
+//		System.out.println();
+//		
+//		Pegawai pgw1 = new Pegawai();
+//		pgw1.setNama("Feny");
+//		pgw1.printAllinfo();
+//		
+//		System.out.println();
+//		
+//		Manusia mns1 = new Manusia();
+//		mns1.setNama("Feny");
+//		mns1.printAllinfo();
 		
 //		System.out.println();
 //		
