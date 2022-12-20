@@ -21,42 +21,51 @@ public class Main {
 				"Singaraja",
 				false,
 				"12344534",
-				"Ilkom",
-				"TI",
-				"FTK");
+				"Kode Ilkom",
+				"Ilkom"
+			);
+		
+		System.out.println();
+		
 		mhs2.printAllinfo();
+		mhs2.getProdi().setKodeProdi("1234");
+		mhs2.getProdi().getKodeProdi();
+		mhs2.getNama();
+		mhs2.getProdi().getKodeJurusan();
 		
-		System.out.println();
-		System.out.println("==DOSEN==");
-		System.out.println();
-		
-		Dosen dsn1 = new Dosen(
-				"Yudhi",
-				"Singaraja",
-				true,
-				"12344534",
-				"Ilkom",
-				"TI",
-				"FTK",
-				"Dosen");
-		dsn1.printAllinfo();
-		
-		System.out.println();
-		System.out.println("==PEGAWAI==");
-		System.out.println();
-		
-		Pegawai pgw1 = new Pegawai(
-				"Dewi",
-				"Singaraja",
-				false,
-				"12344534",
-				"Admin");
-		pgw1.printAllinfo();
-		
+		//ORAK-OREK
 		
 //		System.out.println();
 //		System.out.println("==DOSEN==");
 //		System.out.println();
+//		
+//		Dosen dsn1 = new Dosen(
+//				"Yudhi",
+//				"Singaraja",
+//				true,
+//				"12344534",
+//				"Ilkom",
+//				"TI",
+//				"FTK",
+//				"Dosen");
+//		dsn1.printAllinfo();
+//		
+//		System.out.println();
+//		System.out.println("==PEGAWAI==");
+//		System.out.println();
+//		
+//		Pegawai pgw1 = new Pegawai(
+//				"Dewi",
+//				"Singaraja",
+//				false,
+//				"12344534",
+//				"Admin");
+//		pgw1.printAllinfo();
+//		
+//		
+////		System.out.println();
+////		System.out.println("==DOSEN==");
+////		System.out.println();
 		
 //		Dosen dsn1 = new Dosen(
 //				"Yudhi",
