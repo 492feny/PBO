@@ -6,14 +6,17 @@ public class Prodi implements Jurusan{
 	private String namaProdi;
 	
 	public Prodi() {		//contructor = tempat default value
+		super();
 		this.setKodeProdi("(kode prodi belum diisi)");				
 		this.setNamaProdi("(nama prodi belum diisi)");		
 	}
 
-	public Prodi(String kodeProdi, String namaProdi) {
+	public Prodi(String kodeProdi, String namaProdi, String kodeJurusan, String namaJurusan) {
 		super();
 		this.kodeProdi = kodeProdi;
 		this.namaProdi = namaProdi;
+		this.namaJurusan = namaJurusan;
+		this.kodeJurusan = kodeJurusan;
 	}
 	
 	public String getKodeProdi() {

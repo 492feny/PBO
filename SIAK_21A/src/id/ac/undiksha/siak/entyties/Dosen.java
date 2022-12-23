@@ -1,56 +1,38 @@
 package id.ac.undiksha.siak.entyties;
 
+import id.ac.undiksha.organisasi.Prodi;
+
 public class Dosen extends Manusia{
-//	private String nama;
-//	private String alamat;
-//	private boolean jenisKelamin;	//0 perempuan, 1 laki-laki
 	private String nip;
-	private String prodi;
-	private String jurusan;
-	private String fakultas;
+	public Prodi prodi;
 	private String jabatan;
 	
 	public Dosen() {
-
+		super();
 		this.setNip("(nip belum diisi)");				
-		this.setProdi("(prodi belum diisi)");		
-		this.setJurusan("(jurusan belum diisi)");		
-		this.setFakultas("(fakultas belum diisi)");		
+		prodi = new Prodi();		
+		this.setJabatan("(jabatan belum diisi)");		
 	}
 	
 	
 	
 	public Dosen(String nama, String alamat, boolean jenisKelamin,
-			String nip, String prodi, String jurusan, String fakultas, String jabatan) {
+			String nip, String kodeProdi, String namaProdi, String jabatan, String namaJurusan, String kodeJurusan) {
 		super(nama, alamat, jenisKelamin);
 		this.nip = nip;
-		this.prodi = prodi;
-		this.jurusan = jurusan;
-		this.fakultas = fakultas;
+		prodi = new Prodi(kodeProdi, namaProdi, namaJurusan, kodeJurusan);
 		this.jabatan = jabatan;
 	}
 
-
-
-	public Dosen(String nip, String prodi, String jurusan, String fakultas, String jabatan) {
-		super();
-		this.nip = nip;
-		this.prodi = prodi;
-		this.jurusan = jurusan;
-		this.fakultas = fakultas;
-		this.jabatan = jabatan;
-	}
-
-
-	public void printAllinfo() {
-		System.out.println("Nama: " 	+ this.getNama());
-		System.out.println("Alamat: " 	+ this.getAlamat());
-		System.out.println("NIP: " 		+ this.getNip());
-		System.out.println("Prodi: "	+ this.getProdi());
-		System.out.println("Jurusan: " 	+ this.getJurusan());
-		System.out.println("Fakultas: " + this.getFakultas());
-		System.out.println("Jabatan: " 	+ this.getJabatan());
-		
+	public void printAllinfo() {		//mempengaruhi urutan program ketika di run
+		System.out.println("Nama: " 		+ this.getNama());
+		System.out.println("Alamat: " 		+ this.getAlamat());
+		System.out.println("NIP: " 			+ this.getNip());
+		System.out.println("Kode Prodi: "	+ this.prodi.getKodeProdi());
+		System.out.println("Nama Prodi: " 	+ this.prodi.getNamaProdi());
+		System.out.println("Kode Jurusan: "	+ this.prodi.getKodeJurusan());
+		System.out.println("Nama Jurusan: " 	+ this.prodi.getNamaJurusan());
+		System.out.println("Jabatan: " 		+ this.getJabatan());
 		
 		System.out.println("Jenis Kelamin:"
 				+ (this.isJenisKelamin() ? "Laki-laki" : "Perempuan"));
@@ -70,38 +52,14 @@ public class Dosen extends Manusia{
 
 
 
-	public String getProdi() {
+	public Prodi getProdi() {
 		return prodi;
 	}
 
 
 
-	public void setProdi(String prodi) {
+	public void setProdi(Prodi prodi) {
 		this.prodi = prodi;
-	}
-
-
-
-	public String getJurusan() {
-		return jurusan;
-	}
-
-
-
-	public void setJurusan(String jurusan) {
-		this.jurusan = jurusan;
-	}
-
-
-
-	public String getFakultas() {
-		return fakultas;
-	}
-
-
-
-	public void setFakultas(String fakultas) {
-		this.fakultas = fakultas;
 	}
 
 

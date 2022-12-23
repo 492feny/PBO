@@ -4,7 +4,7 @@ public abstract class Manusia {
 
 	private String nama;
 	private String alamat;
-	private boolean jenisKelamin;
+	private boolean jenisKelamin; //0 perempuan, 1 laki-laki
 	
 	public Manusia() {
 		this.setNama("(nama belum diisi)");
